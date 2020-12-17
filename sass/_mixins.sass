@@ -1,0 +1,24 @@
+=wide-tablet-landscape
+  @media screen and (max-width: 1519px)
+    @content
+
+=tablet-landscape
+  @media screen and (max-width: 1023px)
+    @content
+
+=mobile-landscape
+  @media screen and (max-width: 767px)
+    @content
+
+=my-font($size, $weight, $height)
+  font-family: $main-fonts
+  font-size: $size
+  font-weight: $weight
+  line-height: $height
+  letter-spacing: -0.015em
+
+=circle($size)
+  width: $size
+  height: $size
+  border-radius: 50%
+  overflow: hidden

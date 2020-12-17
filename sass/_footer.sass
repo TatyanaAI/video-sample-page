@@ -1,0 +1,136 @@
+.footer
+    & .container
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 119px 2px 120px
+
+        +wide-tablet-landscape
+            padding-left: 5%
+            padding-right: 5%
+
+        +mobile-landscape
+            padding-top: 60px
+            padding-bottom: 60px
+
+    & .logo
+        display: block
+
+        +mobile-landscape
+            order: 1
+            margin-bottom: 20px
+
+    & .logo_image
+        display: block
+
+    & .line
+        width: 100%
+        height: 1px
+        background: rgba($color-text, 0.5)
+        border: none
+        margin: 40px 0 80px
+
+    & .copyright
+        @extend .text
+        +my-font(15px, 400, 24px)
+        text-align: center
+
+.footer_nav_list_wrapper
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+
+    +mobile-landscape
+        flex-direction: column
+        align-items: center
+
+.footer_nav_list
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 40%
+
+    +wide-tablet-landscape
+        flex-direction: column
+
+    &.left_block
+        justify-content: flex-start
+
+        +wide-tablet-landscape
+            align-items: flex-start
+
+        +mobile-landscape
+            align-items: center
+            order: 2
+
+    &.right_block
+        justify-content: flex-end
+
+        +wide-tablet-landscape
+            align-items: flex-end
+
+        +mobile-landscape
+            align-items: center
+            order: 3
+
+.footer_nav_list_item
+    +my-font(15px, 700, 24px)
+    color: $color-text
+    text-decoration: none
+    transition: 0.3s
+
+    +mobile-landscape
+        +my-font(18px, 700, 30px)
+        padding: 5px 10px
+
+    &:hover
+        color: $color-link
+
+    &.left_block_item
+        margin: 0 106px 0 0
+
+        +wide-tablet-landscape
+            margin: 0 0 10px 0
+
+        +mobile-landscape
+            margin: 0
+
+        &:last-of-type
+            margin: 0
+
+    &.right_block_item
+        margin: 0 0 0 106px
+
+        +wide-tablet-landscape
+            margin: 10px 0 0 0
+
+        +mobile-landscape
+            margin: 0
+
+        &:first-of-type
+            margin: 0
+
+.socials_block
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin: 0 0 40px
+
+    & a
+        +circle(44px)
+        display: block
+        margin: 0 10px
+
+    & img
+        display: block
+
+.socials_block a.logo_facebook
+.socials_block a.logo_facebook_image
+.socials_block a.logo_instagram
+.socials_block a.logo_instagram_image
+.socials_block a.logo_linkedin
+.socials_block a.logo_linkedin_image
+.socials_block a.logo_telegram
+.socials_block a.logo_telegram_image

@@ -1,0 +1,77 @@
+.header
+    padding: 10px 0 10px
+
+    +wide-tablet-landscape
+        padding-left: 5%
+        padding-right: 5%
+
+    & .container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+        +tablet-landscape
+            flex-wrap: wrap
+
+        +mobile-landscape
+            flex-direction: column
+            align-items: flex-start
+
+    & .logo
+        display: block
+        margin-left: 2px
+
+        +tablet-landscape
+            order: 1
+
+    & .logo_image
+        display: block
+
+.header_navbar
+    flex: 1 0 0%
+    display: flex
+    flex-direction: row
+    align-items: center
+    +my-font(15px, 500, 18px)
+    margin: 0 0 0 70px
+
+    +tablet-landscape
+        order: 3
+        flex: auto
+        width: 100%
+        margin: 20px 0 0
+
+    +mobile-landscape
+        +my-font(18px, 700, 30px)
+        flex-direction: column
+
+.header_navbar_item
+    color: $color-link
+    text-decoration: none
+    margin: 0 40px 0 0
+    transition: 0.3s
+
+    +mobile-landscape
+        margin: 0
+        padding: 5px 10px
+
+    &:hover
+        color: $color-text
+
+.header_button_wrapper
+    display: flex
+    flex-direction: row
+    align-items: center
+    align-self: flex-end
+
+    +tablet-landscape
+        order: 2
+
+    +mobile-landscape
+        width: 100%
+        justify-content: center
+        margin-top: 20px
+
+    & .button
+        margin-left: 10px

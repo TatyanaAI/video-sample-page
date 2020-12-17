@@ -1,0 +1,249 @@
+
+.video_block_wrapper
+    position: relative
+    text-align: center
+
+    &.active
+        & .video_play_button
+            display: none
+        & .video_content_text
+            display: none
+        & .button
+            display: none
+
+    & video
+    & .button
+        position: absolute
+        top: 81%
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 2
+
+        +mobile-landscape
+            position: static
+            top: 0
+            left: 0
+            transform: none
+
+.video_block_content
+    position: relative
+
+.video_play_button
+    position: absolute
+    width: 132px
+    height: 132px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: url(../img/ic-play.svg) center no-repeat
+    border: none
+    cursor: pointer
+    transition: 0.3
+    z-index: 2
+    background-size: cover
+
+    +mobile-landscape
+        width: 80px
+        height: 80px
+
+    &:hover
+        opacity: 0.8
+
+.video_content_text
+    +my-font(56px, 400, 80px)
+    position: absolute
+    top: 67%
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
+    z-index: 2
+    width: 100%
+
+    +wide-tablet-landscape
+        +my-font(36px, 400, 50px)
+
+    +tablet-landscape
+        +my-font(24px, 700, 36px)
+
+    +mobile-landscape
+        position: static
+        top: 0
+        left: 0
+        transform: none
+        +my-font(18px, 700, 30px)
+        margin: 10px 0
+
+.main_text_block
+    & .container
+        padding: 120px 2px 120px
+
+        +wide-tablet-landscape
+            padding-left: 5%
+            padding-right: 5%
+
+        +mobile-landscape
+            padding-top: 60px
+            padding-bottom: 60px
+
+    & .main_title
+        width: 50%
+        margin: 0 0 62px 0
+
+        +tablet-landscape
+            width: 100%
+
+    & .main_text_block_title
+        margin: 0 0 23px 0
+
+    & .main_text_block_text
+        @extend .text
+        margin: 0 0 32px 0
+
+.main_text_block_list
+    display: grid
+    grid-template-columns: 1fr 1fr
+    column-gap: 152px
+    row-gap: 61px
+
+    +tablet-landscape
+        column-gap: 80px
+
+    +mobile-landscape
+        grid-template-columns: 1fr
+
+.main_text_block_list_item
+
+.main_photo_text_block
+    & .container
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding: 80px 2px 80px
+
+        +wide-tablet-landscape
+            padding-left: 5%
+            padding-right: 5%
+
+        +mobile-landscape
+            flex-direction: column
+            padding-top: 60px
+            padding-bottom: 60px
+
+    &.dark_block
+        background: $color-bg-dark_block
+
+    & img
+        +wide-tablet-landscape
+            width: 45%
+
+        +mobile-landscape
+            width: 100%
+            max-width: 750px
+            order: 1
+            margin-bottom: 20px
+
+    & .main_text_block_title
+        margin: 0 0 24px
+
+    & .main_text_block_text
+        @extend .text
+
+.main_photo_text_block_wrapper
+    width: 45%
+    display: flex
+    flex-direction: column
+
+    +mobile-landscape
+        width: 100%
+        order: 2
+
+.main_gallery_block
+    padding: 120px 0 120px
+    text-align: center
+
+    +wide-tablet-landscape
+        padding-left: 5%
+        padding-right: 5%
+
+    +mobile-landscape
+        padding-top: 60px
+        padding-bottom: 60px
+
+    & .main_title
+        margin: 0 0 30px
+
+    & .main_subtitle
+        @extend .text
+        width: 90%
+        margin: 0 auto 80px
+
+        +wide-tablet-landscape
+            width: 100%
+
+        +mobile-landscape
+            margin-bottom: 40px
+
+.main_gallery_block_wrapper
+    display: inline-grid
+    grid-template-columns: repeat(4, 173px)
+    column-gap: 84px
+    row-gap: 65px
+    margin: 0 auto
+
+    +wide-tablet-landscape
+        column-gap: 65px
+
+    +tablet-landscape
+        grid-template-columns: repeat(2, 173px)
+
+    +mobile-landscape
+        grid-template-columns: 1fr
+        row-gap: 40px
+
+.main_small_button_block
+    background: $color-bg-dark_block
+
+    & .container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 120px 2px 120px
+
+        +wide-tablet-landscape
+            padding-left: 5%
+            padding-right: 5%
+            flex-direction: column
+
+        +mobile-landscape
+            text-align: center
+            padding-top: 60px
+            padding-bottom: 60px
+
+    & .main_subtitle
+        width: 62%
+
+        +wide-tablet-landscape
+            width: 100%
+
+.main_small_button_block_button_wrapper
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-right: 60px
+
+    +wide-tablet-landscape
+        width: 100%
+        margin-top: 20px
+        margin-right: 0
+
+    +mobile-landscape
+        flex-direction: column
+
+    & .dark_button
+        margin-right: 45px
+
+        +mobile-landscape
+            margin-bottom: 20px
+            margin-right: 0

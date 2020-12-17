@@ -1,0 +1,96 @@
+$color-text: #000000
+$color-bg-body: #ffffff
+$color-bg-dark_block: #F5F5F5
+
+$color-link: #18A0FB
+
+$main-font: 'Montserrat'
+$main-fonts: $main-font, Arial, sans-serif 
+    
+@import _mixins
+@import _header
+@import _main
+@import _footer
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    outline: 0
+
+
+body
+    +my-font(18px, 400, 30px)
+    color: $color-text
+    background-color: $color-bg-body
+    min-width: 320px
+
+h1
+    +my-font(48px, 400, 72px)
+
+    +mobile-landscape
+        +my-font(36px, 400, 50px)
+
+h2
+    +my-font(36px, 400, 50px)
+
+    +mobile-landscape
+        +my-font(24px, 700, 36px)
+
+h3
+    +my-font(24px, 700, 36px)
+
+    +mobile-landscape
+        +my-font(18px, 700, 30px)
+
+.container
+    width: 1520px
+    margin: 0 auto
+
+    +wide-tablet-landscape
+        width: 100%
+
+    +tablet-landscape
+
+    +mobile-landscape
+
+.button
+    display: inline-block
+    border-width: 1px
+    border-style: solid
+    border-color: $color-link
+    border-radius: 6px
+    text-align: center
+    text-decoration: none
+    transition: background-color 0.3s, color 0.3s
+
+.small_button
+    height: 40px
+    width: 130px
+    +my-font(15px, 500, 38px)
+
+.big_button
+    height: 52px
+    width: 192px
+    +my-font(17px, 500, 50px)
+
+.light_button
+    background-color: white
+    color: $color-link
+
+    &:hover
+        background-color: $color-link
+        color: white
+
+.dark_button
+    background-color: $color-link
+    color: white
+
+    &:hover
+        background-color: white
+        color: $color-link
+
+.main_title
+.main_subtitle
+.text
+    color: rgba($color-text, 0.8)
